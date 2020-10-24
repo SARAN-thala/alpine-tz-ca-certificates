@@ -1,4 +1,4 @@
-name: Manual workflow
+name: Docker build and deploy workflow
 on:
   schedule:
   - cron: "*/5 * * * *"

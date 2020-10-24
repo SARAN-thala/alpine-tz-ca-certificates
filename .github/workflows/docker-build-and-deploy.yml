@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: docker build and deploy
-      run: curl --location --request POST ${{ secrets.DOCKER_HUB_API }}
+      run: curl -I -X POST ${{ secrets.DOCKER_HUB_API }} 2>/dev/null | head -n 1
       shell: bash

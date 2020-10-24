@@ -1,7 +1,7 @@
 name: Docker build and deploy workflow
 on:
   schedule:
-  - cron: "*/15 * * * *"
+  - cron: "0 10 * * 5"
 
 jobs:
   stale:

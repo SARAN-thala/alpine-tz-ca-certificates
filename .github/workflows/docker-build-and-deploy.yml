@@ -1,11 +1,11 @@
-name: Docker build and deploy workflow
+name: Publish Docker
 on:
   push:
     branches:
       - "main"
 
 jobs:
-  stale:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Docker Buildx
@@ -21,4 +21,3 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/alpine-tz-ca-certificates:latest
-          

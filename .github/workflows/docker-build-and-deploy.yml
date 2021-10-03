@@ -1,8 +1,7 @@
 name: Docker build and deploy workflow
 on:
-  push:
-    branches:
-      - "main"
+  schedule:
+  - cron: "0 10 * * 5"
 
 jobs:
   stale:
@@ -21,4 +20,3 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/alpine-tz-ca-certificates:latest
-          
